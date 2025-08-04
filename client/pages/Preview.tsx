@@ -1,5 +1,5 @@
 import { PlaceholderPage } from '@/components/PlaceholderPage';
-import { Cube } from 'lucide-react';
+import { Box } from 'lucide-react';
 
 export default function Preview() {
   const features = [
@@ -17,7 +17,7 @@ export default function Preview() {
     <PlaceholderPage
       title="3D Content Preview"
       description="Advanced 3D content preview system with real-time rendering, interactive environments, and comprehensive testing tools."
-      icon={Cube}
+      icon={Box}
       features={features}
     />
   );
