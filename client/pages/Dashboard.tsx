@@ -158,7 +158,9 @@ export default function Dashboard() {
                   <div className="flex items-center space-x-1 text-sm">
                     <TrendingUp className="w-3 h-3 text-neon-green" />
                     <span className="text-neon-green">{stat.change}</span>
-                    <span className="text-muted-foreground">from last month</span>
+                    <span className="text-muted-foreground">
+                      from last month
+                    </span>
                   </div>
                 </CardContent>
               </Card>
@@ -264,7 +266,8 @@ export default function Dashboard() {
                       3D Analytics Dashboard
                     </h3>
                     <p className="text-muted-foreground mb-4">
-                      Interactive 3D widgets and immersive data visualization - now available in Advanced Analytics tab!
+                      Interactive 3D widgets and immersive data visualization -
+                      now available in Advanced Analytics tab!
                     </p>
                     <Button className="bg-gradient-to-r from-neon-blue to-neon-purple hover:opacity-90">
                       <Globe className="w-4 h-4 mr-2" />
@@ -386,27 +389,45 @@ export default function Dashboard() {
               </CardDescription>
             </CardHeader>
             <CardContent className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <Button variant="outline" className="h-20 flex flex-col items-center justify-center space-y-2">
+              <Button
+                variant="outline"
+                className="h-20 flex flex-col items-center justify-center space-y-2"
+              >
                 <Bot className="w-6 h-6 text-neon-blue" />
                 <span className="text-sm">AI Generator</span>
               </Button>
-              <Button variant="outline" className="h-20 flex flex-col items-center justify-center space-y-2">
+              <Button
+                variant="outline"
+                className="h-20 flex flex-col items-center justify-center space-y-2"
+              >
                 <Box className="w-6 h-6 text-neon-pink" />
                 <span className="text-sm">3D Creator</span>
               </Button>
-              <Button variant="outline" className="h-20 flex flex-col items-center justify-center space-y-2">
+              <Button
+                variant="outline"
+                className="h-20 flex flex-col items-center justify-center space-y-2"
+              >
                 <Calendar className="w-6 h-6 text-neon-green" />
                 <span className="text-sm">Scheduler</span>
               </Button>
-              <Button variant="outline" className="h-20 flex flex-col items-center justify-center space-y-2">
+              <Button
+                variant="outline"
+                className="h-20 flex flex-col items-center justify-center space-y-2"
+              >
                 <BarChart3 className="w-6 h-6 text-primary" />
                 <span className="text-sm">Analytics</span>
               </Button>
-              <Button variant="outline" className="h-20 flex flex-col items-center justify-center space-y-2">
+              <Button
+                variant="outline"
+                className="h-20 flex flex-col items-center justify-center space-y-2"
+              >
                 <Users className="w-6 h-6 text-neon-purple" />
                 <span className="text-sm">Collaboration</span>
               </Button>
-              <Button variant="outline" className="h-20 flex flex-col items-center justify-center space-y-2">
+              <Button
+                variant="outline"
+                className="h-20 flex flex-col items-center justify-center space-y-2"
+              >
                 <Globe className="w-6 h-6 text-neon-blue" />
                 <span className="text-sm">Distribution</span>
               </Button>

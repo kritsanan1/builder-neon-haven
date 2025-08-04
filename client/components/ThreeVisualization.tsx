@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Text, Box, Sphere } from '@react-three/drei';
-import * as THREE from 'three';
+import { useEffect, useRef, useState } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { OrbitControls, Text, Box, Sphere } from "@react-three/drei";
+import * as THREE from "three";
 
 interface DataPoint {
   x: number;
@@ -39,7 +39,7 @@ function DataVisualization({ data }: { data: DataPoint[] }) {
           >
             <meshStandardMaterial
               color={point.color}
-              emissive={hovered === index ? point.color : '#000000'}
+              emissive={hovered === index ? point.color : "#000000"}
               emissiveIntensity={hovered === index ? 0.3 : 0}
               transparent
               opacity={0.8}
@@ -58,10 +58,10 @@ function DataVisualization({ data }: { data: DataPoint[] }) {
           )}
         </group>
       ))}
-      
+
       {/* Grid lines */}
-      <gridHelper args={[10, 10, '#444444', '#444444']} position={[0, -2, 0]} />
-      
+      <gridHelper args={[10, 10, "#444444", "#444444"]} position={[0, -2, 0]} />
+
       {/* Ambient lighting */}
       <ambientLight intensity={0.4} />
       <pointLight position={[10, 10, 10]} intensity={0.8} color="#8b5cf6" />
@@ -70,12 +70,16 @@ function DataVisualization({ data }: { data: DataPoint[] }) {
   );
 }
 
-export function ThreeVisualization({ data, width = 400, height = 300 }: ThreeVisualizationProps) {
+export function ThreeVisualization({
+  data,
+  width = 400,
+  height = 300,
+}: ThreeVisualizationProps) {
   return (
     <div style={{ width, height }} className="rounded-lg overflow-hidden">
       <Canvas
         camera={{ position: [5, 5, 5], fov: 50 }}
-        style={{ background: 'transparent' }}
+        style={{ background: "transparent" }}
       >
         <OrbitControls
           enableDamping
@@ -102,15 +106,26 @@ function PerformanceBars({ data }: { data: PerformanceData }) {
 
   useFrame((state) => {
     if (groupRef.current) {
-      groupRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.3) * 0.1;
+      groupRef.current.rotation.y =
+        Math.sin(state.clock.elapsedTime * 0.3) * 0.1;
     }
   });
 
   const metrics = [
-    { name: 'Content', value: data.contentCreation, color: '#06b6d4', x: -1.5 },
-    { name: 'Engagement', value: data.userEngagement, color: '#ec4899', x: -0.5 },
-    { name: 'AI Processing', value: data.aiProcessing, color: '#8b5cf6', x: 0.5 },
-    { name: 'Render Queue', value: data.renderQueue, color: '#10b981', x: 1.5 }
+    { name: "Content", value: data.contentCreation, color: "#06b6d4", x: -1.5 },
+    {
+      name: "Engagement",
+      value: data.userEngagement,
+      color: "#ec4899",
+      x: -0.5,
+    },
+    {
+      name: "AI Processing",
+      value: data.aiProcessing,
+      color: "#8b5cf6",
+      x: 0.5,
+    },
+    { name: "Render Queue", value: data.renderQueue, color: "#10b981", x: 1.5 },
   ];
 
   return (
@@ -148,7 +163,7 @@ function PerformanceBars({ data }: { data: PerformanceData }) {
           </Text>
         </group>
       ))}
-      
+
       <ambientLight intensity={0.5} />
       <pointLight position={[5, 5, 5]} intensity={1} color="#8b5cf6" />
       <pointLight position={[-5, 5, -5]} intensity={0.7} color="#06b6d4" />
@@ -156,12 +171,20 @@ function PerformanceBars({ data }: { data: PerformanceData }) {
   );
 }
 
-export function Performance3D({ data, width = 400, height = 300 }: { data: PerformanceData; width?: number; height?: number }) {
+export function Performance3D({
+  data,
+  width = 400,
+  height = 300,
+}: {
+  data: PerformanceData;
+  width?: number;
+  height?: number;
+}) {
   return (
     <div style={{ width, height }} className="rounded-lg overflow-hidden">
       <Canvas
         camera={{ position: [3, 3, 3], fov: 50 }}
-        style={{ background: 'transparent' }}
+        style={{ background: "transparent" }}
       >
         <OrbitControls
           enableDamping
