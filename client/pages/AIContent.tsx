@@ -20,7 +20,7 @@ import {
   Brain,
   Target,
   Palette,
-  Language,
+  Languages,
   Send,
   RefreshCw,
   Download,
