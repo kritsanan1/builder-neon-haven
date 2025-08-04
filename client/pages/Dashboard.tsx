@@ -1,15 +1,21 @@
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
-import { Badge } from '@/components/ui/badge';
-import { 
-  BarChart3, 
-  Bot, 
-  TrendingUp, 
-  Users, 
-  Zap, 
-  Eye, 
-  Heart, 
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress";
+import { Badge } from "@/components/ui/badge";
+import {
+  BarChart3,
+  Bot,
+  TrendingUp,
+  Users,
+  Zap,
+  Eye,
+  Heart,
   Share2,
   Plus,
   Calendar,
@@ -18,8 +24,8 @@ import {
   Activity,
   Target,
   Box,
-  PieChart
-} from 'lucide-react';
+  PieChart,
+} from "lucide-react";
 
 const statsCards = [
   {
@@ -27,29 +33,29 @@ const statsCards = [
     value: "2,847",
     change: "+12.5%",
     icon: Bot,
-    color: "text-neon-blue"
+    color: "text-neon-blue",
   },
   {
     title: "Engagement Rate",
     value: "94.2%",
     change: "+8.1%",
     icon: Heart,
-    color: "text-neon-pink"
+    color: "text-neon-pink",
   },
   {
     title: "Active Users",
     value: "18.4K",
     change: "+23.2%",
     icon: Users,
-    color: "text-neon-green"
+    color: "text-neon-green",
   },
   {
     title: "AI Efficiency",
     value: "99.7%",
     change: "+2.3%",
     icon: Sparkles,
-    color: "text-primary"
-  }
+    color: "text-primary",
+  },
 ];
 
 const recentContent = [
@@ -59,7 +65,7 @@ const recentContent = [
     type: "Campaign",
     status: "Published",
     engagement: 98.5,
-    views: 15420
+    views: 15420,
   },
   {
     id: 2,
@@ -67,7 +73,7 @@ const recentContent = [
     type: "3D Content",
     status: "Processing",
     engagement: 0,
-    views: 0
+    views: 0,
   },
   {
     id: 3,
@@ -75,15 +81,15 @@ const recentContent = [
     type: "Strategy",
     status: "Draft",
     engagement: 0,
-    views: 0
-  }
+    views: 0,
+  },
 ];
 
 const analyticsData = [
   { name: "Content Creation", value: 85, color: "bg-neon-blue" },
   { name: "User Engagement", value: 92, color: "bg-neon-pink" },
   { name: "3D Interactions", value: 78, color: "bg-neon-green" },
-  { name: "AI Processing", value: 96, color: "bg-primary" }
+  { name: "AI Processing", value: 96, color: "bg-primary" },
 ];
 
 export default function Dashboard() {
@@ -96,7 +102,8 @@ export default function Dashboard() {
             Content Command Center
           </h1>
           <p className="text-muted-foreground mt-1">
-            Manage your AI-powered content creation and 3D visualization platform
+            Manage your AI-powered content creation and 3D visualization
+            platform
           </p>
         </div>
         <div className="flex items-center space-x-3">
@@ -114,7 +121,11 @@ export default function Dashboard() {
       {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {statsCards.map((stat, index) => (
-          <Card key={index} className="glass-card hover:shadow-glow transition-all duration-300 animate-float" style={{ animationDelay: `${index * 0.1}s` }}>
+          <Card
+            key={index}
+            className="glass-card hover:shadow-glow transition-all duration-300 animate-float"
+            style={{ animationDelay: `${index * 0.1}s` }}
+          >
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium text-muted-foreground">
                 {stat.title}
@@ -143,7 +154,8 @@ export default function Dashboard() {
               <span>Performance Analytics</span>
             </CardTitle>
             <CardDescription>
-              Real-time insights into your content performance and AI optimization
+              Real-time insights into your content performance and AI
+              optimization
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
@@ -151,12 +163,14 @@ export default function Dashboard() {
               <div key={index} className="space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-medium">{item.name}</span>
-                  <span className="text-sm text-muted-foreground">{item.value}%</span>
+                  <span className="text-sm text-muted-foreground">
+                    {item.value}%
+                  </span>
                 </div>
                 <Progress value={item.value} className="h-2" />
               </div>
             ))}
-            
+
             <div className="pt-4 border-t border-border/50">
               <div className="flex items-center justify-between">
                 <span className="text-sm font-medium">3D Render Queue</span>
@@ -167,7 +181,9 @@ export default function Dashboard() {
               </div>
               <div className="mt-2 space-y-2">
                 <div className="flex items-center justify-between text-sm">
-                  <span className="text-muted-foreground">Current: Product Visualization #2847</span>
+                  <span className="text-muted-foreground">
+                    Current: Product Visualization #2847
+                  </span>
                   <span>78%</span>
                 </div>
                 <Progress value={78} className="h-1" />
@@ -219,12 +235,15 @@ export default function Dashboard() {
         <CardContent>
           <div className="space-y-4">
             {recentContent.map((content) => (
-              <div key={content.id} className="flex items-center justify-between p-4 glass-card rounded-lg hover:shadow-glow transition-all duration-300">
+              <div
+                key={content.id}
+                className="flex items-center justify-between p-4 glass-card rounded-lg hover:shadow-glow transition-all duration-300"
+              >
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-primary to-neon-purple rounded-lg flex items-center justify-center">
-                    {content.type === '3D Content' ? (
+                    {content.type === "3D Content" ? (
                       <Box className="w-6 h-6 text-primary-foreground" />
-                    ) : content.type === 'Campaign' ? (
+                    ) : content.type === "Campaign" ? (
                       <Target className="w-6 h-6 text-primary-foreground" />
                     ) : (
                       <Bot className="w-6 h-6 text-primary-foreground" />
@@ -237,9 +256,19 @@ export default function Dashboard() {
                         {content.type}
                       </Badge>
                       <span>•</span>
-                      <Badge 
-                        variant={content.status === 'Published' ? 'default' : content.status === 'Processing' ? 'secondary' : 'outline'}
-                        className={content.status === 'Published' ? 'bg-neon-green/20 text-neon-green border-neon-green/30' : ''}
+                      <Badge
+                        variant={
+                          content.status === "Published"
+                            ? "default"
+                            : content.status === "Processing"
+                              ? "secondary"
+                              : "outline"
+                        }
+                        className={
+                          content.status === "Published"
+                            ? "bg-neon-green/20 text-neon-green border-neon-green/30"
+                            : ""
+                        }
                       >
                         {content.status}
                       </Badge>
@@ -247,7 +276,7 @@ export default function Dashboard() {
                   </div>
                 </div>
                 <div className="flex items-center space-x-6 text-sm text-muted-foreground">
-                  {content.status === 'Published' && (
+                  {content.status === "Published" && (
                     <>
                       <div className="flex items-center space-x-1">
                         <Eye className="w-4 h-4" />
@@ -287,9 +316,12 @@ export default function Dashboard() {
                 <Box className="w-8 h-8 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">3D Analytics Dashboard</h3>
+                <h3 className="text-xl font-semibold mb-2">
+                  3D Analytics Dashboard
+                </h3>
                 <p className="text-muted-foreground mb-4">
-                  Interactive 3D widgets and immersive data visualization coming soon
+                  Interactive 3D widgets and immersive data visualization coming
+                  soon
                 </p>
                 <Button className="bg-gradient-to-r from-neon-blue to-neon-purple hover:opacity-90">
                   <Globe className="w-4 h-4 mr-2" />
@@ -297,12 +329,21 @@ export default function Dashboard() {
                 </Button>
               </div>
             </div>
-            
+
             {/* Floating elements */}
             <div className="absolute top-4 left-4 w-3 h-3 bg-neon-blue rounded-full animate-glow-pulse opacity-60"></div>
-            <div className="absolute top-12 right-8 w-2 h-2 bg-neon-pink rounded-full animate-glow-pulse opacity-40" style={{ animationDelay: '0.5s' }}></div>
-            <div className="absolute bottom-8 left-12 w-4 h-4 bg-neon-green rounded-full animate-glow-pulse opacity-50" style={{ animationDelay: '1s' }}></div>
-            <div className="absolute bottom-4 right-4 w-2 h-2 bg-primary rounded-full animate-glow-pulse opacity-70" style={{ animationDelay: '1.5s' }}></div>
+            <div
+              className="absolute top-12 right-8 w-2 h-2 bg-neon-pink rounded-full animate-glow-pulse opacity-40"
+              style={{ animationDelay: "0.5s" }}
+            ></div>
+            <div
+              className="absolute bottom-8 left-12 w-4 h-4 bg-neon-green rounded-full animate-glow-pulse opacity-50"
+              style={{ animationDelay: "1s" }}
+            ></div>
+            <div
+              className="absolute bottom-4 right-4 w-2 h-2 bg-primary rounded-full animate-glow-pulse opacity-70"
+              style={{ animationDelay: "1.5s" }}
+            ></div>
           </div>
         </CardContent>
       </Card>

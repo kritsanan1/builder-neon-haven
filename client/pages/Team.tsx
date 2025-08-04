@@ -1,5 +1,5 @@
-import { PlaceholderPage } from '@/components/PlaceholderPage';
-import { Users } from 'lucide-react';
+import { PlaceholderPage } from "@/components/PlaceholderPage";
+import { Users } from "lucide-react";
 
 export default function Team() {
   const features = [
@@ -10,7 +10,7 @@ export default function Team() {
     "Communication hub integration",
     "Skill-based task matching",
     "Progress tracking dashboard",
-    "Team productivity insights"
+    "Team productivity insights",
   ];
 
   return (

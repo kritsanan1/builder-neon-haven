@@ -1,5 +1,5 @@
-import { PlaceholderPage } from '@/components/PlaceholderPage';
-import { History } from 'lucide-react';
+import { PlaceholderPage } from "@/components/PlaceholderPage";
+import { History } from "lucide-react";
 
 export default function PostHistory() {
   const features = [
@@ -10,7 +10,7 @@ export default function PostHistory() {
     "Content lifecycle analytics",
     "Automated backup system",
     "Bulk operations interface",
-    "Export and migration tools"
+    "Export and migration tools",
   ];
 
   return (

@@ -110,7 +110,7 @@ export default {
             filter: "drop-shadow(0 0 40px currentColor)",
           },
         },
-        "float": {
+        float: {
           "0%, 100%": {
             transform: "translateY(0px)",
           },
@@ -133,7 +133,7 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "glow-pulse": "glow-pulse 2s ease-in-out infinite",
-        "float": "float 3s ease-in-out infinite",
+        float: "float 3s ease-in-out infinite",
         "slide-in": "slide-in 0.5s ease-out",
         fontFamily: {
           sans: ["Inter", "ui-sans-serif", "system-ui"],
@@ -144,7 +144,7 @@ export default {
         },
         boxShadow: {
           "glow-sm": "0 0 10px -2px currentColor",
-          "glow": "0 0 20px -2px currentColor",
+          glow: "0 0 20px -2px currentColor",
           "glow-lg": "0 0 40px -2px currentColor",
           "inner-glow": "inset 0 0 20px -8px currentColor",
         },

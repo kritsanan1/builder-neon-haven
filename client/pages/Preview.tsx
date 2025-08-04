@@ -1,16 +1,16 @@
-import { PlaceholderPage } from '@/components/PlaceholderPage';
-import { Box } from 'lucide-react';
+import { PlaceholderPage } from "@/components/PlaceholderPage";
+import { Box } from "lucide-react";
 
 export default function Preview() {
   const features = [
     "Real-time 3D content rendering",
-    "Interactive preview environments", 
+    "Interactive preview environments",
     "Multi-device preview simulation",
     "AR/VR compatibility testing",
     "Performance optimization tools",
     "Collaborative review system",
     "Version comparison tools",
-    "Export to various 3D formats"
+    "Export to various 3D formats",
   ];
 
   return (

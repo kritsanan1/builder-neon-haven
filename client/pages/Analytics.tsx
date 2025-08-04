@@ -1,5 +1,5 @@
-import { PlaceholderPage } from '@/components/PlaceholderPage';
-import { BarChart3 } from 'lucide-react';
+import { PlaceholderPage } from "@/components/PlaceholderPage";
+import { BarChart3 } from "lucide-react";
 
 export default function Analytics() {
   const features = [
@@ -10,7 +10,7 @@ export default function Analytics() {
     "Immersive data exploration",
     "Custom dashboard widgets",
     "Export 3D charts and reports",
-    "Collaborative analytics workspace"
+    "Collaborative analytics workspace",
   ];
 
   return (

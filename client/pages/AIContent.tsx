@@ -1,19 +1,31 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Badge } from '@/components/ui/badge';
-import { Progress } from '@/components/ui/progress';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { 
-  Bot, 
-  Sparkles, 
-  TrendingUp, 
-  Globe, 
-  Heart, 
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Bot,
+  Sparkles,
+  TrendingUp,
+  Globe,
+  Heart,
   MessageSquare,
   BarChart3,
   Zap,
@@ -24,20 +36,20 @@ import {
   Send,
   RefreshCw,
   Download,
-  Eye
-} from 'lucide-react';
+  Eye,
+} from "lucide-react";
 
 const sentimentData = [
   { label: "Positive", value: 68, color: "bg-neon-green" },
   { label: "Neutral", value: 25, color: "bg-cyber-400" },
-  { label: "Negative", value: 7, color: "bg-destructive" }
+  { label: "Negative", value: 7, color: "bg-destructive" },
 ];
 
 const trendingTopics = [
   { topic: "AI Technology", trend: "+45%", popularity: 92 },
   { topic: "3D Visualization", trend: "+32%", popularity: 87 },
   { topic: "Content Creation", trend: "+28%", popularity: 84 },
-  { topic: "Digital Marketing", trend: "+21%", popularity: 76 }
+  { topic: "Digital Marketing", trend: "+21%", popularity: 76 },
 ];
 
 const languages = [
@@ -46,7 +58,7 @@ const languages = [
   { code: "fr", name: "French", flag: "🇫🇷" },
   { code: "de", name: "German", flag: "🇩🇪" },
   { code: "ja", name: "Japanese", flag: "🇯🇵" },
-  { code: "zh", name: "Chinese", flag: "🇨🇳" }
+  { code: "zh", name: "Chinese", flag: "🇨🇳" },
 ];
 
 export default function AIContent() {
@@ -59,7 +71,9 @@ export default function AIContent() {
     setIsGenerating(true);
     // Simulate AI generation
     setTimeout(() => {
-      setGeneratedContent("🚀 Revolutionize your content creation with our cutting-edge AI platform! Experience the future of digital storytelling through immersive 3D visualizations and intelligent automation. #AIContentCreation #3DVisualization #DigitalInnovation");
+      setGeneratedContent(
+        "🚀 Revolutionize your content creation with our cutting-edge AI platform! Experience the future of digital storytelling through immersive 3D visualizations and intelligent automation. #AIContentCreation #3DVisualization #DigitalInnovation",
+      );
       setIsGenerating(false);
     }, 3000);
   };
@@ -105,7 +119,7 @@ export default function AIContent() {
                   <TabsTrigger value="marketing">Marketing</TabsTrigger>
                   <TabsTrigger value="creative">Creative</TabsTrigger>
                 </TabsList>
-                
+
                 <TabsContent value="social" className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
@@ -129,23 +143,27 @@ export default function AIContent() {
                           <SelectValue placeholder="Select tone" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="professional">Professional</SelectItem>
+                          <SelectItem value="professional">
+                            Professional
+                          </SelectItem>
                           <SelectItem value="casual">Casual</SelectItem>
-                          <SelectItem value="enthusiastic">Enthusiastic</SelectItem>
+                          <SelectItem value="enthusiastic">
+                            Enthusiastic
+                          </SelectItem>
                           <SelectItem value="humorous">Humorous</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
                   </div>
                 </TabsContent>
-                
+
                 <TabsContent value="blog" className="space-y-4">
                   <div className="space-y-2">
                     <Label htmlFor="topic">Blog Topic</Label>
                     <Input placeholder="Enter your blog topic..." />
                   </div>
                 </TabsContent>
-                
+
                 <TabsContent value="marketing" className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
@@ -167,7 +185,7 @@ export default function AIContent() {
                     </div>
                   </div>
                 </TabsContent>
-                
+
                 <TabsContent value="creative" className="space-y-4">
                   <div className="space-y-2">
                     <Label htmlFor="style">Creative Style</Label>
@@ -176,7 +194,9 @@ export default function AIContent() {
                         <SelectValue placeholder="Select style" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="storytelling">Storytelling</SelectItem>
+                        <SelectItem value="storytelling">
+                          Storytelling
+                        </SelectItem>
                         <SelectItem value="poetic">Poetic</SelectItem>
                         <SelectItem value="screenplay">Screenplay</SelectItem>
                       </SelectContent>
@@ -187,15 +207,18 @@ export default function AIContent() {
 
               <div className="space-y-2">
                 <Label htmlFor="prompt">Content Brief</Label>
-                <Textarea 
-                  placeholder="Describe what you want to create..." 
+                <Textarea
+                  placeholder="Describe what you want to create..."
                   className="min-h-[100px]"
                 />
               </div>
 
               <div className="space-y-2">
                 <Label>Target Language</Label>
-                <Select value={selectedLanguage} onValueChange={setSelectedLanguage}>
+                <Select
+                  value={selectedLanguage}
+                  onValueChange={setSelectedLanguage}
+                >
                   <SelectTrigger>
                     <SelectValue />
                   </SelectTrigger>
@@ -212,7 +235,7 @@ export default function AIContent() {
                 </Select>
               </div>
 
-              <Button 
+              <Button
                 onClick={handleGenerate}
                 className="w-full bg-gradient-to-r from-primary to-neon-purple hover:opacity-90"
                 disabled={isGenerating}
@@ -246,20 +269,25 @@ export default function AIContent() {
                   <div className="space-y-4">
                     <div className="flex items-center space-x-2">
                       <Brain className="w-4 h-4 text-primary animate-glow-pulse" />
-                      <span className="text-sm text-muted-foreground">AI is analyzing trends and generating content...</span>
+                      <span className="text-sm text-muted-foreground">
+                        AI is analyzing trends and generating content...
+                      </span>
                     </div>
                     <Progress value={66} className="h-2" />
                   </div>
                 ) : (
                   <div className="space-y-4">
-                    <Textarea 
+                    <Textarea
                       value={generatedContent}
                       onChange={(e) => setGeneratedContent(e.target.value)}
                       className="min-h-[120px]"
                     />
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                        <Badge variant="outline" className="neon-border text-neon-green">
+                        <Badge
+                          variant="outline"
+                          className="neon-border text-neon-green"
+                        >
                           Quality Score: 94%
                         </Badge>
                         <Badge variant="outline">
@@ -275,7 +303,10 @@ export default function AIContent() {
                           <Download className="w-4 h-4 mr-1" />
                           Export
                         </Button>
-                        <Button size="sm" className="bg-gradient-to-r from-neon-blue to-neon-purple">
+                        <Button
+                          size="sm"
+                          className="bg-gradient-to-r from-neon-blue to-neon-purple"
+                        >
                           <Send className="w-4 h-4 mr-1" />
                           Publish
                         </Button>
@@ -302,8 +333,12 @@ export default function AIContent() {
               {sentimentData.map((sentiment, index) => (
                 <div key={index} className="space-y-2">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium">{sentiment.label}</span>
-                    <span className="text-sm text-muted-foreground">{sentiment.value}%</span>
+                    <span className="text-sm font-medium">
+                      {sentiment.label}
+                    </span>
+                    <span className="text-sm text-muted-foreground">
+                      {sentiment.value}%
+                    </span>
                   </div>
                   <Progress value={sentiment.value} className="h-2" />
                 </div>
@@ -321,12 +356,20 @@ export default function AIContent() {
             </CardHeader>
             <CardContent className="space-y-3">
               {trendingTopics.map((topic, index) => (
-                <div key={index} className="flex items-center justify-between p-3 glass-card rounded-lg">
+                <div
+                  key={index}
+                  className="flex items-center justify-between p-3 glass-card rounded-lg"
+                >
                   <div className="space-y-1">
                     <div className="font-medium text-sm">{topic.topic}</div>
-                    <div className="text-xs text-muted-foreground">Popularity: {topic.popularity}%</div>
+                    <div className="text-xs text-muted-foreground">
+                      Popularity: {topic.popularity}%
+                    </div>
                   </div>
-                  <Badge variant="outline" className="text-neon-green border-neon-green/30">
+                  <Badge
+                    variant="outline"
+                    className="text-neon-green border-neon-green/30"
+                  >
                     {topic.trend}
                   </Badge>
                 </div>
@@ -347,7 +390,9 @@ export default function AIContent() {
                 {languages.map((lang) => (
                   <Button
                     key={lang.code}
-                    variant={selectedLanguage === lang.code ? "default" : "outline"}
+                    variant={
+                      selectedLanguage === lang.code ? "default" : "outline"
+                    }
                     size="sm"
                     onClick={() => setSelectedLanguage(lang.code)}
                     className="justify-start"
