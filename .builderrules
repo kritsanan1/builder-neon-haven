@@ -1,0 +1,99 @@
+# Project Name: Tourderwang 2.0
+
+## Description
+Tourderwang 2.0 is an advanced AI-driven platform that revolutionizes social media content creation and optimization with cutting-edge features and immersive 3D analytics.
+
+## Primary Goals
+- Implement AI-powered content generation and sentiment analysis
+- Enable advanced scheduling and multi-language support
+- Develop interactive 3D analytics and content preview features
+
+----------------------------------------------------
+
+## Tech Stack & Environment
+
+**Frontend:** Vite + React + TypeScript + Tailwind CSS
+
+**Backend:** Supabase (PostgreSQL + Auth)
+
+**Target Platform:** Single-Page Application
+
+**Framework Versions & Config:** Latest stable versions
+
+----------------------------------------------------
+
+## Requirements & Features
+
+### Core Features:
+
+- AI-powered suggestions and content generation
+- Sentiment and trend analysis tools
+- Advanced scheduling with AI predictions
+- Multi-language support for global reach
+- Interactive 3D analytics dashboard
+- 3D content preview for platform simulation
+
+### User Flows
+1. User logs in and accesses the main page.
+2. User inputs keywords or themes for AI content generation.
+3. User receives AI-generated content and optimization suggestions.
+4. User explores sentiment and trend analysis insights.
+5. User schedules posts using AI-driven engagement predictions.
+6. User customizes analytics view, including immersive 3D dashboard.
+7. User previews posts in a 3D environment, simulating real-world interactions.
+8. User manages team collaboration and multi-language content.
+9. User submits posts, which are scheduled via Ayrshare API.
+10. User views post performance in both traditional and 3D analytics dashboards.
+
+### Business Rules
+- Posts should be scheduled at optimal times for engagement.
+- Users can manage multi-language content and team collaboration seamlessly.
+- 3D analytics should provide real-time data visualization and insights.
+- AI suggestions and analysis must leverage historical and trend data effectively.
+
+----------------------------------------------------
+
+## UI/UX Design
+
+### Layout
+- Clean and futuristic layout, enhancing usability for advanced content tools and 3D visualization.
+- Fully responsive design for seamless use across devices.
+
+### Look & Feel
+- Sleek, modern aesthetics with emphasis on immersive and interactive design elements.
+- Consistent brand identity through color schemes and typography.
+
+### Pages
+- Main Dashboard
+- AI Content Creation
+- Advanced Scheduling
+- 3D Analytics Dashboard
+- 3D Content Preview
+- Team Management
+- Post History
+
+### Components
+- AI Content Generator Form
+- Sentiment and Trend Analysis Panel
+- Multi-Language Selector
+- 3D Interactive Widgets
+- Team Collaboration Tools
+
+----------------------------------------------------
+
+## Data Model & Supabase Setup
+
+### Database Schema
+- Users Table: Stores user information and settings
+- Posts Table: Stores post details and scheduling information
+- Analytics Table: Stores analytics data related to posts
+- Teams Table: Stores team information and roles
+- Language Support Table: Manages multi-language content details
+
+### Row-Level Security
+Enabled by default
+
+### Auth Requirements
+- Secure email/password authentication
+- OAuth integration for social media platforms
+- Role-based access control for team management
