@@ -57,6 +57,26 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Futuristic brand colors
+        cyber: {
+          50: "hsl(var(--cyber-50))",
+          100: "hsl(var(--cyber-100))",
+          200: "hsl(var(--cyber-200))",
+          300: "hsl(var(--cyber-300))",
+          400: "hsl(var(--cyber-400))",
+          500: "hsl(var(--cyber-500))",
+          600: "hsl(var(--cyber-600))",
+          700: "hsl(var(--cyber-700))",
+          800: "hsl(var(--cyber-800))",
+          900: "hsl(var(--cyber-900))",
+          950: "hsl(var(--cyber-950))",
+        },
+        neon: {
+          blue: "hsl(var(--neon-blue))",
+          purple: "hsl(var(--neon-purple))",
+          green: "hsl(var(--neon-green))",
+          pink: "hsl(var(--neon-pink))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +100,54 @@ export default {
             height: "0",
           },
         },
+        "glow-pulse": {
+          "0%, 100%": {
+            opacity: "1",
+            filter: "drop-shadow(0 0 20px currentColor)",
+          },
+          "50%": {
+            opacity: "0.8",
+            filter: "drop-shadow(0 0 40px currentColor)",
+          },
+        },
+        "float": {
+          "0%, 100%": {
+            transform: "translateY(0px)",
+          },
+          "50%": {
+            transform: "translateY(-10px)",
+          },
+        },
+        "slide-in": {
+          from: {
+            transform: "translateX(-100%)",
+            opacity: "0",
+          },
+          to: {
+            transform: "translateX(0)",
+            opacity: "1",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "glow-pulse": "glow-pulse 2s ease-in-out infinite",
+        "float": "float 3s ease-in-out infinite",
+        "slide-in": "slide-in 0.5s ease-out",
+        fontFamily: {
+          sans: ["Inter", "ui-sans-serif", "system-ui"],
+          mono: ["JetBrains Mono", "ui-monospace", "monospace"],
+        },
+        backdropBlur: {
+          xs: "2px",
+        },
+        boxShadow: {
+          "glow-sm": "0 0 10px -2px currentColor",
+          "glow": "0 0 20px -2px currentColor",
+          "glow-lg": "0 0 40px -2px currentColor",
+          "inner-glow": "inset 0 0 20px -8px currentColor",
+        },
       },
     },
   },
