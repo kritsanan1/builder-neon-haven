@@ -4,8 +4,8 @@ import { Button } from './ui/button';
 import { 
   BarChart3, 
   Bot, 
-  Calendar, 
-  Cube, 
+  Calendar,
+  Box,
   Home, 
   Menu, 
   Palette, 
@@ -27,7 +27,7 @@ const navigation = [
   { name: 'AI Content', href: '/ai-content', icon: Bot },
   { name: 'Scheduling', href: '/scheduling', icon: Calendar },
   { name: '3D Analytics', href: '/analytics', icon: BarChart3 },
-  { name: '3D Preview', href: '/preview', icon: Cube },
+  { name: '3D Preview', href: '/preview', icon: Box },
   { name: 'Team', href: '/team', icon: Users },
   { name: 'History', href: '/history', icon: History },
 ];
