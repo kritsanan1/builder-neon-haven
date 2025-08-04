@@ -17,7 +17,7 @@ import {
   Sparkles,
   Activity,
   Target,
-  Cube,
+  Box,
   PieChart
 } from 'lucide-react';
 
@@ -105,7 +105,7 @@ export default function Dashboard() {
             New Content
           </Button>
           <Button variant="outline" className="neon-border">
-            <Cube className="w-4 h-4 mr-2" />
+            <Box className="w-4 h-4 mr-2" />
             3D View
           </Button>
         </div>
@@ -190,7 +190,7 @@ export default function Dashboard() {
               Generate AI Content
             </Button>
             <Button className="w-full justify-start bg-gradient-to-r from-neon-pink/20 to-transparent border border-neon-pink/30 hover:bg-neon-pink/10">
-              <Cube className="w-4 h-4 mr-2" />
+              <Box className="w-4 h-4 mr-2" />
               Create 3D Model
             </Button>
             <Button className="w-full justify-start bg-gradient-to-r from-neon-green/20 to-transparent border border-neon-green/30 hover:bg-neon-green/10">
@@ -223,7 +223,7 @@ export default function Dashboard() {
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-primary to-neon-purple rounded-lg flex items-center justify-center">
                     {content.type === '3D Content' ? (
-                      <Cube className="w-6 h-6 text-primary-foreground" />
+                      <Box className="w-6 h-6 text-primary-foreground" />
                     ) : content.type === 'Campaign' ? (
                       <Target className="w-6 h-6 text-primary-foreground" />
                     ) : (
@@ -273,7 +273,7 @@ export default function Dashboard() {
       <Card className="glass-card">
         <CardHeader>
           <CardTitle className="flex items-center space-x-2">
-            <Cube className="w-5 h-5 text-neon-blue" />
+            <Box className="w-5 h-5 text-neon-blue" />
             <span>3D Visualization Hub</span>
           </CardTitle>
           <CardDescription>
@@ -284,7 +284,7 @@ export default function Dashboard() {
           <div className="cyber-grid rounded-lg p-8 flex items-center justify-center min-h-[300px] relative overflow-hidden">
             <div className="text-center space-y-4">
               <div className="w-16 h-16 bg-gradient-to-r from-neon-blue to-neon-purple rounded-2xl flex items-center justify-center mx-auto animate-float">
-                <Cube className="w-8 h-8 text-white" />
+                <Box className="w-8 h-8 text-white" />
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">3D Analytics Dashboard</h3>
